@@ -24,4 +24,5 @@ To run the tests you need to run:
 python -m pytest --cov-config=tests/.coveragerc --cov=. tests/
 ````
 You are able to see the coverage then.
+
 When experiencing any problems getting the project working, you can contact me at: timweiss01@gmx.de.
