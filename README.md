@@ -14,4 +14,14 @@ Dash is running on http://127.0.0.1:8050/
    Use a production WSGI server instead.
  * Debug mode: on
  ````
-## How the test work
+ Then you have to go to `http://127.0.0.1:8050/`.
+
+ 
+## Tests
+The tests are in the `test` folder.
+To run the tests you need to run:
+````
+python -m pytest --cov-config=tests/.coveragerc --cov=. tests/
+````
+
+ When experiencing any problems getting the project working, you can contact me at: timweiss01@gmx.de.
