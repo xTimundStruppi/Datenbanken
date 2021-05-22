@@ -19,6 +19,7 @@ Dash is running on http://127.0.0.1:8050/
  
 ## Tests
 The tests are in the `test` folder.
+To run the tests the you have to run the `app.py`once. Also the players LeBron James and Michael Jordan need to be downloaded. (To download them, you need to compare them)
 To run the tests you need to run:
 ````
 python -m pytest --cov-config=tests/.coveragerc --cov=. tests/
