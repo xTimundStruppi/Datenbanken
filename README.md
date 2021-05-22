@@ -4,7 +4,7 @@ To get the project running you have to install all the requirements. They are al
 ````
 pip install -r requirements.txt
 ````
-After that you can run the `app.py` in the `src` folder. This will load a while, because the databse is created (1-2 min). When finished, you will get the following output in your console:
+After that you can run the `app.py` in the `src` folder. This will load a while, because the database is created (1-2 min). When finished, you will get the following output in your console:
 ````
 Dash is running on http://127.0.0.1:8050/
 
