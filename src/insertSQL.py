@@ -8,7 +8,7 @@ import sqlite3
 #executes the databse statements
 def execute(test):
 
-    conn = sqlite3.connect('players.db')
+    conn = sqlite3.connect('basketball.db')
     c = conn.cursor()
     c.execute(test)
     conn.commit()
@@ -54,7 +54,6 @@ def insertData(player_id,pts,ast,rebs,stl,blocks,fg3a,fg3m,fga,fgm,fta,ftm,seaso
         return True
     
     return False 
-
   
 #insert playes in database in table 'players'
 def insertPlayers(id,name):
