@@ -22,7 +22,7 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 
 # creates database if it does not already exists
-if not os.path.isfile('players.db'):
+if not os.path.isfile('basketball.db'):
     print("Please wait until the database is initialized.")
     insertSQL.setDatabase()
     api.getPlayers()
