@@ -10,7 +10,7 @@ import pandas as pd
 #executes the databse statements
 def execute(test):
 
-    conn = sqlite3.connect('players.db')
+    conn = sqlite3.connect('basketball.db')
     c = conn.cursor()
     c.execute(test)
     conn.commit()
@@ -21,7 +21,7 @@ def execute(test):
 def avgData(player_id1,player_id2,stat):
         
         #get database connection
-        conn = sqlite3.connect('players.db')
+        conn = sqlite3.connect('basketball.db')
 
         #get the season averages from player 1 and sort it by data
         df1 = pd.read_sql_query(f"SELECT AVG({stat}),date FROM 'games' WHERE id = {player_id1} group by season ", conn)
@@ -73,7 +73,7 @@ def avgData(player_id1,player_id2,stat):
 def gameData(player_id1,player_id2,stat):
 
         #get the database connection
-        conn = sqlite3.connect('players.db')
+        conn = sqlite3.connect('basketball.db')
         
         #get the stats for all games from player1 and sort it by date
         df1 = pd.read_sql_query(f"SELECT {stat},date FROM 'games' WHERE id= {player_id1}", conn)
@@ -121,14 +121,14 @@ def gameData(player_id1,player_id2,stat):
     
 #gets all players that played in the nba
 def getPlayers():
-    conn = sqlite3.connect('players.db')
+    conn = sqlite3.connect('basketball.db')
     df = pd.read_sql_query("SELECT * FROM 'players'", conn)
     return df    
 
 #checks if a player is already downloaded
 def isDownloaded(player_id):
   
-    conn = sqlite3.connect('players.db')
+    conn = sqlite3.connect('basketball.db')
     c = conn.cursor()
     status = c.execute(f"SELECT downloaded FROM 'players' WHERE id = {player_id}")
     data=status.fetchone()
